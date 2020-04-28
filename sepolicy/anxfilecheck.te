@@ -1,0 +1,16 @@
+type anxfilecheck, domain;
+typeattribute anxfilecheck coredomain;
+
+type anxfilecheck_exec, exec_type, system_file_type, file_type;
+
+init_daemon_domain(anxfilecheck)
+
+# Allow anxfilecheck to read and execute shell_exec
+allow anxfilecheck shell_exec:file rx_file_perms;
+
+# Allow anxfilecheck to read and execute toolbox_exec
+allow anxfilecheck toolbox_exec:file rx_file_perms;
+
+# Allow anxfilecheck to create directories and files in sdcard
+allow anxfilecheck { media_rw_data_file mnt_user_file sdcardfs storage_file }:dir create_dir_perms;
+allow anxfilecheck { media_rw_data_file mnt_user_file sdcardfs storage_file }:{ file lnk_file } create_file_perms;

@@ -1,0 +1,2 @@
+# ANX filecheck
+/system/bin/anxfilecheck                u:object_r:anxfilecheck_exec:s0
