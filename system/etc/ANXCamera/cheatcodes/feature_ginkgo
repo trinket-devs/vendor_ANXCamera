@@ -16,7 +16,7 @@
   "s_s_m_t": true,
   "s_u_w": true,
   "c_0x06": true,
-  "c_0x22": true,
+  "c_0x22": false,
   "s_o_a_w": false,
   "c_0x45": true,
   "s_m_f": true,
